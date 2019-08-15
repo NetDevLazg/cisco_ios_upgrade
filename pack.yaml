@@ -6,5 +6,7 @@ version: 0.2.0
 keywords:
   - Cisco
   - IOS
-author: LMAS
-email: lmas@lmas.com
+python_versions:
+  - "3"
+author: LazG
+email: kentik.hanzo94@gmail.com
