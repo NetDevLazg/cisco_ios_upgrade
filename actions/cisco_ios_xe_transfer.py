@@ -58,7 +58,7 @@ ios_image = "{}"
 md5_checksum = "{}"
 '''
         
-        with open('/opt/stackstorm/packs/st2_ios_upgrades/actions/ios_xe_varibales.py', 'w') as f:
+        with open('/opt/stackstorm/packs/st2_ios_upgrade/actions/ios_xe_varibales.py', 'w') as f:
             f.write(variables.format(IP,IOS_IMAGE,IOS_MD5_CHECKSUM))
         
         print("-----------------------------------------------")
