@@ -2,9 +2,6 @@ from netmiko import ConnectHandler
 from netmiko.ssh_exception import NetMikoTimeoutException
 from paramiko.ssh_exception import SSHException
 from netmiko.ssh_exception import AuthenticationException
-from ios_xe_varibales import hostip
-from ios_xe_varibales import ios_image
-from ios_xe_varibales import md5_checksum
 import os
 import time
 import subprocess
@@ -21,7 +18,7 @@ the username until he enters something, the same thing happens for the password.
 
 class cisco_ios_xe_upgrade(Action):
 
-    def run(self,IP,USERNAME,PASSWORD,):
+    def run(self,IP,USERNAME,PASSWORD,IOS_IMAGE,MD5_CHECKSUM):
         """
         This function is used by stack storm to run the code and based
         on the return code see if is successful or if it failed.
@@ -30,6 +27,9 @@ class cisco_ios_xe_upgrade(Action):
         """
         Setting the device values for netmiko to connect to the device.
         """
+        ios_image = IOS_IMAGE
+        md5_checksum = MD5_CHECKSUM
+
         device_profile = {
                 'device_type' : 'cisco_ios',
                 'ip' : IP,
@@ -184,13 +184,8 @@ class cisco_ios_xe_upgrade(Action):
         Reboots the router
         """
         reboot = net_connect.send_command_timing('reload')
-        
-        if "System configuration has been modified. Save? [yes/no]" in reboot:
-            reboot += net_connect.send_command_timing("yes\n")
-        
-        if "Proceed with reload" in reboot:
-            reboot += net_connect.send_command_timing("\n")
-        
+        enter  = net_connect.send_command_timing('\n')
+              
         
         
         time.sleep(30)
