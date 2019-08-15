@@ -1,0 +1,10 @@
+---
+ref: st2_ios_upgrade
+name: st2_ios_upgrade
+description: Pack to upgrade cisco ISR routers.
+version: 0.2.0
+keywords:
+  - Cisco
+  - IOS
+author: LMAS
+email: lmas@lmas.com
