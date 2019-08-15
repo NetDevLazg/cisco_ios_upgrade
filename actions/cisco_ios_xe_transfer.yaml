@@ -27,8 +27,3 @@ parameters:
       description: "Cisco IOS Image Name:"
       required: true
       position: 3
-    IOS_MD5_CHECKSUM:
-      type: "string"
-      description: "Cisco IOS Image MD5 Checksum:"
-      required: true
-      position: 4

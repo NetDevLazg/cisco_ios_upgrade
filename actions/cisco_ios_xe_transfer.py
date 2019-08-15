@@ -8,14 +8,14 @@ from st2common.runners.base_action import Action
 
 class cisco_ios_xe_transfer(Action):
 
-    def run(self,IP,USERNAME,PASSWORD,IOS_IMAGE,IOS_MD5_CHECKSUM):
+    def run(self,IP,USERNAME,PASSWORD,IOS_IMAGE):
         """
         This function is used by stack storm to run the code and based
         on the return code see if is successful or if it failed.
         """
 
         ios_image = '/opt/stackstorm/files_repo/ios_repo/{}'.format(IOS_IMAGE)
-        md5_checksum = IOS_MD5_CHECKSUM
+        
         
         ssh_client=paramiko.SSHClient()
         ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
@@ -41,28 +41,7 @@ class cisco_ios_xe_transfer(Action):
         print("-----------------------------------------------")
         scp.close()
         
-        print(" ")
-        print(" ")
-        print("-----------------------------------------------")
-        print("-----------Creating Variable File--------------")
-        print("-----------------------------------------------")
-        time.sleep(5)
-        
-        variables = '''
-#------------------------------------------------#
-# Below are the variables for the ROM-MON Upgrade
-#------------------------------------------------#
-        
-hostip = "{}"
-ios_image = "{}"
-md5_checksum = "{}"
-'''
-        
-        with open('/opt/stackstorm/packs/st2_ios_upgrade/actions/ios_xe_varibales.py', 'w') as f:
-            f.write(variables.format(IP,IOS_IMAGE,IOS_MD5_CHECKSUM))
-        
-        print("-----------------------------------------------")
-        print("-----------Variable File Created---------------")
+
         print("-----------------------------------------------")
         print("-----You can now run the other script----------")
         print("-----------------------------------------------")
