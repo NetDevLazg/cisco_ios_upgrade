@@ -6,7 +6,10 @@
 
 ```
 make sure the virtual enviroment is python 3.
+##CentOS
 st2 pack install https://github.com/NetDevLazg/cisco_ios_upgrade.git --python3
+##Ubuntu
+st2 pack install https://github.com/NetDevLazg/cisco_ios_upgrade.git
 ```
 
 2. After you create the folder files_repo create two new folder inside and called them ios_repo and rom_mon_repo.
