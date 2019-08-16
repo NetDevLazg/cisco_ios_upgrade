@@ -8,10 +8,3 @@
 
 3. Store ios images insides ios_repo and rom_mon packages inside rom_mon_repo.
 
-tree /opt/stackstorm/files_repo/
-/opt/stackstorm/files_repo/
-├── ios_repo
-│   ├── csr1000v-universalk9.16.06.06.SPA.bin
-│   └── csr1000v-universalk9.16.09.03.SPA.bin
-└── rom_mon_repo
-
