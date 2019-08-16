@@ -75,7 +75,7 @@ class cisco_ios_xe_upgrade(Action):
             print('Router version is HIGHER than ROM-MON Version')
             print('Please upgrade the ROM-MON before doing the OS Upgrade')
             print("-------------------------------------------------")
-            return, False,"Router version is HIGHER than ROM-MON Version"
+            return False,"Router version is HIGHER than ROM-MON Version"
             exit()
         else:
             print("-------------------------------------------------")
