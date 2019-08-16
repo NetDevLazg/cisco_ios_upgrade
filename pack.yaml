@@ -2,7 +2,7 @@
 ref: cisco_ios_upgrade
 name: cisco_ios_upgrade
 description: Pack to upgrade cisco ISR routers.
-version: 0.2.0
+version: 0.2.1
 keywords:
   - Cisco
   - IOS
