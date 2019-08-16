@@ -27,8 +27,3 @@ parameters:
       description: "ROM MOn File Name:"
       required: true
       position: 3
-    ROM_MON_MD5_CHECKSUM:
-      type: "string"
-      description: "ROM MOn File MD5 Checksum:"
-      required: true
-      position: 4
