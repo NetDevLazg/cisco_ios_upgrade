@@ -1,0 +1,74 @@
+### Example of what the script does
+# Please note this might not be 100% accurate since script can be updated to print different things.
+
+```
+-------------------------------------------------
+Checking MD5 Checksum - Please Wait
+-------------------------------------------------
+-------------------------------------------------
+MD5 Checksum Matched
+-------------------------------------------------
+Cleaning Boot Configurations
+-------------------------------------------------
+Changing Boot Variable
+-------------------------------------------------
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+IAD1-MPLS(config)#boot system bootflash:/csr1000v-universalk9.16.09.03.SPA.bin
+IAD1-MPLS(config)#boot system bootflash:/csr1000v-universalk9.16.09.03.SPA.bin
+IAD1-MPLS(config)#exit
+IAD1-MPLS#wr
+Building configuration...
+
+-------------------------------------------------
+Checking boot varibale once more
+-------------------------------------------------
+-------------------------------------------------
+BOOT variable = bootflash:/csr1000v-universalk9.16.09.03.SPA.bin,12;
+CONFIG_FILE variable does not exist
+BOOTLDR variable does not exist
+Configuration register is 0x2102
+
+-------------------------------------------------
+-------------------------------------------------
+The boot Varibale was changed successfully
+-------------------------------------------------
+-------------------------------------------------
+Rebooting Device Now
+-------------------------------------------------
+Waitting for Device to Return:
+Waitting for Device to Return:
+Waitting for Device to Return:
+Waitting for Device to Return:
+Waitting for Device to Return:
+Waitting for Device to Return:
+Waitting for Device to Return:
+Waitting for Device to Return:
+Waitting for Device to Return:
+Waitting for Device to Return:
+Waitting for Device to Return:
+Waitting for Device to Return:
+Waitting for Device to Return:
+Waitting for Device to Return:
+Waitting for Device to Return:
+Waitting for Device to Return:
+Waitting for Device to Return:
+Waitting for Device to Return:
+Waitting for Device to Return:
+Waitting for Device to Return:
+Waitting for Device to Return:
+Waitting for Device to Return:
+Waitting for Device to Return:
+Waitting for Device to Return:
+Waitting for Device to Return:
+Waitting for Device to Return:
+-------------------------------------------------
+Device is now up
+-------------------------------------------------
+-------------------------------------------------
+Checking if IOS Upgrade was successful
+-------------------------------------------------
+-------------------------------------------------
+IOS UPGRADE WAS SUCCESSFUL - COMPLETE
+-------------------------------------------------
+```
