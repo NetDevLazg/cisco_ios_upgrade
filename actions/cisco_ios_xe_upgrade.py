@@ -7,15 +7,9 @@ import time
 import subprocess
 import sys
 from st2common.runners.base_action import Action
-""" 
-Prompts the user for his username and Password, if the users hits enter 
-by mistakes and does not type anything the while loop will prompt again for 
-the username until he enters something, the same thing happens for the password.
- """
 
 
     
-
 class cisco_ios_xe_upgrade(Action):
 
     def run(self,IP,USERNAME,PASSWORD,IOS_IMAGE,MD5_CHECKSUM):

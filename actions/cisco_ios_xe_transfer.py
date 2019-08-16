@@ -4,7 +4,6 @@ import sys
 import time
 from st2common.runners.base_action import Action
 
-    
 
 class cisco_ios_xe_transfer(Action):
 
