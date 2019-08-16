@@ -57,31 +57,31 @@ class cisco_ios_xe_upgrade(Action):
         Funcion below is to grab the current ROM-MON version of the device
         and slice it to match the version code.
         """
-#        def rom_mon_ver():
-#            rom_mon_ver = net_connect.send_command('sh rom-monitor R0 | in Version')
-#            rom_mon_ver_updated = rom_mon_ver.split(' ')[3][3]
-#            return int(rom_mon_ver_updated)
-#        
-#        router_rom_mon_version = rom_mon_ver()
-#        router_image_revision = int(ios_image.split('.')[2])
-#        
-#        print("-------------------------------------------------")
-#        print('Checking ROM-MON Version - Please Wait')
-#        print("-------------------------------------------------")
-#        
-#        
-#        if router_rom_mon_version < router_image_revision:
-#            print("-------------------------------------------------")
-#            print('Router version is HIGHER than ROM-MON Version')
-#            print('Please upgrade the ROM-MON before doing the OS Upgrade')
-#            print("-------------------------------------------------")
-#            exit()
-#        else:
-#            print("-------------------------------------------------")
-#            print('Router Version is lower or equal to ROM-MON Version')
-#            print('Proceeding with the IOS Upgrade')    
-#            print("-------------------------------------------------")
-#        
+        def rom_mon_ver():
+            rom_mon_ver = net_connect.send_command('sh rom-monitor R0 | in Version')
+            rom_mon_ver_updated = rom_mon_ver.split(' ')[3][3]
+            return int(rom_mon_ver_updated)
+        
+        router_rom_mon_version = rom_mon_ver()
+        router_image_revision = int(ios_image.split('.')[2])
+        
+        print("-------------------------------------------------")
+        print('Checking ROM-MON Version - Please Wait')
+        print("-------------------------------------------------")
+        
+        
+        if router_rom_mon_version < router_image_revision:
+            print("-------------------------------------------------")
+            print('Router version is HIGHER than ROM-MON Version')
+            print('Please upgrade the ROM-MON before doing the OS Upgrade')
+            print("-------------------------------------------------")
+            exit() return, False,"Router version is HIGHER than ROM-MON Version"
+        else:
+            print("-------------------------------------------------")
+            print('Router Version is lower or equal to ROM-MON Version')
+            print('Proceeding with the IOS Upgrade')    
+            print("-------------------------------------------------")
+        
         print("-------------------------------------------------")
         print('Checking MD5 Checksum - Please Wait')
         print("-------------------------------------------------")
@@ -159,17 +159,8 @@ class cisco_ios_xe_upgrade(Action):
             return False,"Boot Variable did not change"
             exit()
         
-        """
-        Prompts if you want to continue with the reboot or not, if you press 1 it will continue
-        and we if you press 2 it will cancel the script.
-        """
-        print("-------------------------------------------------")
-        print('Do you want to proceed and reboot the device?')
-        print('       Press 1 for Yes | Press 2 for NO '        )
-        print("-------------------------------------------------")
-        awnser = "1"
         
-        if awnser == '1':
+        if awnser == ios_image in boot_variable and md5_checksum in checking_md5:
             print("-------------------------------------------------")
             print("Rebooting Device Now")
             print("-------------------------------------------------")
