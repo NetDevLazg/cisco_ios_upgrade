@@ -1,6 +1,6 @@
 ---
-ref: st2_ios_upgrade
-name: st2_ios_upgrade
+ref: cisco_ios_upgrade
+name: cisco_ios_upgrade
 description: Pack to upgrade cisco ISR routers.
 version: 0.2.0
 keywords:
