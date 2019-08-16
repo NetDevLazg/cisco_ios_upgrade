@@ -6,6 +6,8 @@ description: "Transfer IOS file to Cisco Router"
 enabled: true
 entry_point: "cisco_ios_xe_transfer.py"
 parameters:
+    timeout:
+      default: 1200
     IP:
       type: "string"
       description: "IP Address of the device:"
