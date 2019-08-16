@@ -21,7 +21,7 @@ class cisco_rom_mon_upgrade(Action):
         """
         Setting the device values for netmiko to connect to the device.
         """
-        ios_image = ROM_MON_IMAGE
+        rom_image = ROM_MON_IMAGE
         md5_checksum = MD5_CHECKSUM
 
         device_profile = {
