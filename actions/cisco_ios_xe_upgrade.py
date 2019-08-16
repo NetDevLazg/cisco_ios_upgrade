@@ -161,7 +161,7 @@ class cisco_ios_xe_upgrade(Action):
             exit()
         
         
-        if awnser == ios_image in boot_variable and md5_checksum in checking_md5:
+        if ios_image in boot_variable and md5_checksum in checking_md5:
             print("-------------------------------------------------")
             print("Rebooting Device Now")
             print("-------------------------------------------------")
