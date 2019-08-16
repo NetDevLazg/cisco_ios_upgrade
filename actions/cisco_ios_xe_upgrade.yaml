@@ -6,6 +6,8 @@ description: "Upgrades the IOS version on a Cisco Router running IOS-XE"
 enabled: true
 entry_point: "cisco_ios_xe_upgrade.py"
 parameters:
+    timeout:
+      default: 1200
     IP:
       type: "string"
       description: "IP Address of the device:"
