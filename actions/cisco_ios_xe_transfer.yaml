@@ -7,7 +7,7 @@ enabled: true
 entry_point: "cisco_ios_xe_transfer.py"
 parameters:
     timeout:
-      default: 1200
+      default: 3600
     IP:
       type: "string"
       description: "IP Address of the device:"
