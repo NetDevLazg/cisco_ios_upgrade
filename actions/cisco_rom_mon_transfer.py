@@ -19,7 +19,7 @@ class cisco_rom_mon_transer(Action):
         
         ssh_client=paramiko.SSHClient()
         ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-        ssh_client.connect(hostname=IP,username=USERNAME,password=PASSWORD)
+        ssh_client.connect(hostname=IP,username=USERNAME,password=PASSWORD,look_for_keys=False)
         
         
         def progress4(filename, size, sent, peername):

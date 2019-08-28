@@ -17,10 +17,10 @@ class cisco_ios_xe_transfer(Action):
         ip = IP
         user = USERNAME
         passw = PASSWORD
-        
+
         ssh_client=paramiko.SSHClient()
         ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-        ssh_client.connect(hostname=ip,username=user,password=passw)
+        ssh_client.connect(hostname=ip,username=user,password=passw,look_for_keys=False)
             
         
         print("-----------------------------------------------")
