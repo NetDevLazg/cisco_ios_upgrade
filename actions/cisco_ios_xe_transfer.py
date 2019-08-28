@@ -14,11 +14,13 @@ class cisco_ios_xe_transfer(Action):
         """
 
         ios_image = '/opt/stackstorm/files_repo/ios_repo/{}'.format(IOS_IMAGE)
-        
+        ip = IP
+        user = USERNAME
+        passw = PASSWORD
         
         ssh_client=paramiko.SSHClient()
         ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-        ssh_client.connect(hostname=IP,username=USERNAME,password=PASSWORD)
+        ssh_client.connect(hostname=ip,username=user,password=passw)
             
         
         print("-----------------------------------------------")
