@@ -53,8 +53,9 @@ class cisco_ios_xe_upgrade(Action):
         """
         def rom_mon_ver():
             rom_mon_ver = net_connect.send_command('sh rom-monitor R0 | in Version')
-            rom_mon_ver_updated = rom_mon_ver.split(' ')[3][3,4]
-            return int(rom_mon_ver_updated)
+            rom_mon_ver_updated = rom_mon_ver.split(' ')[3][3]
+            rom_mon_ver_updated2 = rom_mon_ver.split(' ')[3][4]
+            return int(rom_mon_ver_updated + rom_mon_ver_updated2)
         
         router_rom_mon_version = rom_mon_ver()
         router_image_revision = int(ios_image.split('.')[2])
