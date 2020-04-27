@@ -210,7 +210,7 @@ class cisco_ios_xe_upgrade(Action):
         print("Checking if IOS Upgrade was successful")
         print("-------------------------------------------------")
         
-        time.sleep(10)
+        time.sleep(20)
         """
         initiates a new session to the device to check if the update was done.
         """
