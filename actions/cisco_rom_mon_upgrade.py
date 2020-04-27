@@ -130,7 +130,7 @@ class cisco_rom_mon_upgrade(Action):
         print("Checking if ROM-MON Upgrade was successful")
         print("-------------------------------------------------")
         
-        time.sleep(10)
+        time.sleep(20)
 
         try:
             net_connect = ConnectHandler(**device_profile)
